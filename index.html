@@ -1,0 +1,196 @@
+<!DOCTYPE html lang="pt-br">
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="js/jquery-3.2.1.js"> </script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    
+</head>
+<body> 
+    
+    <!-- Header da Pagina Login/Cadastro--> 
+    <div class="page-header">
+        <div class="jumbotron text-center hero">
+            <h1>SchooLINE</h1>
+            <p>Plataforma Web de controle e de desempenho escolar</p> 
+        </div>
+    </div> 
+    <!--Fim do Header--> 
+
+    <!-- Section para conteudo de Login-->    
+    <section class="LOGIN">    
+    <div class="container">
+        <div class="top-content">    	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1>Bem-Vindo ao <strong>SchooLINE</strong></h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                            <div class="form-top">
+                                <div class="form-top-left">
+                                    <h3>Faça o Login para acessar o sistema</h3>
+                                    <p>Entre com a matrícula e a sua senha:</p>
+                                </div>
+                                <div class="form-top-right">
+                        			<i class="fa fa-lock"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+                                <form role="form" action="" method="post" class="login-form" >
+                                    <fieldset>
+                                        <legend class="sr-only">Formulario de Login</legend>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-username" id="form-matricula">Matricula</label>
+                                            <input type="number" name="matricula" placeholder="Matrícula..." class="form-username form-control" id="matricula" required pattern="[^0-9]+" title="Preencha o campo com um valor entre 1 e 10.">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-password">Senha</label>
+                                            <input type="password" name="form-password" placeholder="Senha..." class="form-password form-control" id="form-password" required>
+                                        </div>
+                                    </fieldset>
+                                    <button type="submit" class="btn btn-success" data-loading-text="Loading..." autocomplete="off" id="btLogon">Logar</button>
+                                    <button type="button" class="btn btn-danger" id="btCadastro" style="margin-top: 4px;">Faça seu Cadastro</button>                            
+                                    <input type="submit" id="btnSubmitForm" value="enviar" style="visibility:hidden;"/>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>     
+        </div>
+     </section>   
+    <!-- Fim da Section para conteudo de Login-->     
+
+    <!-- Section para conteudo de Cadastro--> 
+    <section class="CADASTRO"> 
+        <div class="container">
+            <div class="top-content">    	
+                <div class="inner-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3 form-box">
+                                <div class="form-top">
+                                    <div class="form-top-left">
+                                        <h3>Faça seu Registro</h3>
+                                        <p>Entre com seus dados completos</p>
+                                    </div>
+                                    <div class="form-top-right">
+                                       <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="form-bottom">
+                                    <form role="form" action="" method="post" class="login-form">
+                                        <fieldset>
+                                            <legend class="sr-only">Formulario de Cadastro</legend>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="nome">Nome</label>
+                                                <input type="text" name="nome" placeholder="Digite seu nome..." class="form-username form-control" id="nome" required title="Preencha seu nome">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="sr-only" for="sobrenome">Sobrenome</label>
+                                                <input type="text" name="sobrenome" placeholder="Digite seu sobrenome..." class="form-username form-control" id="sobrenome" required title="Preencha seu sobrenome.">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="sr-only" for="matricula">Matricula</label>
+                                                <input type="number" name="matricula" placeholder="Digite sua matrícula..." class="form-username form-control" id="matricula" required pattern="[^0-9]+" title="Preencha sua matrícula.">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="sr-only" for="email">Email</label>
+                                                <input type="email" name="email" placeholder="Digite seu email..." class="form-password form-control" id="email" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="sr-only" for="senha">Senha</label>
+                                                <input type="password" name="senha" placeholder="Digite sua senha..." class="form-password form-control" id="senha" required>
+                                            </div>
+                                        </fieldset>
+                                        <button type="submit" class="btn btn-success Reg" data-loading-text="Registrando..." autocomplete="off" id="btRegistrar">Registrar</button>
+                                        <button type="button" class="btn btn-danger edt" id="btVoltar" style="margin-top: 4px;">Voltar</button>      
+                                        <input type="submit" id="btnSubmitForm" value="enviar" style="visibility:hidden;"/>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </section> 
+    <!-- Section para conteudo de Cadastro-->  
+
+    <!-- Script para troca de conteudo LOGIN/CADASTRO -->
+    <script>
+        $("#btCadastro").click(function(){            
+           $('.CADASTRO').css('display', 'block')
+           $('.LOGIN').css('display', 'none')
+        });
+
+        $("#btVoltar").click(function(){
+           $('.CADASTRO').css('display', 'none')
+           $('.LOGIN').css('display', 'block')
+        });      
+        $(document).ready(function(){ 
+            $("#btLogon").click(function(){
+                $(this).button('loading').delay(500).queue(function(){
+                    $(this).button('reset');
+                    $(this).dequeue();
+                    $(location).attr('href', 'pages/home.html');
+                });        
+            });
+        });       
+        $(document).ready(function(){ 
+            $("#btRegistrar").click(function(){
+                $(this).button('loading').delay(500).queue(function(){
+                    $(this).button('reset');
+                    $(this).dequeue();
+                });        
+            });
+        });
+    </script>
+    <!-- Fim do Script -->
+    
+    
+    
+    <!-- Footer da Pagina de Login/Cadastro -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 footer-about wow fadeInUp">
+                    <h3>Sobre o SchooLine</h3>
+                    <p>
+                        Sistema Web Responsivo desenvolvido na componente curricular optativa de Tópicos Especiais em Desenvolvimento Web do curso de Ciência da Computação, da
+                        Universidade Federal da Fronteira Sul.
+                    </p>
+                </div>
+                <div class="col-sm-6 footer-contact-info wow fadeInDown">
+                    <h3>Informações de Contato</h3>
+                    <p><i class="fa fa-map-marker"></i> Av. Getúlio Vargas, 10136 Chapecó - Santa Catarina - Brasil</p>
+                    <p><i class="fa fa-phone"></i> Fone: (049) 99999-9999</p>
+                    <p><i class="fa fa-envelope"></i> Email: <a href="mailto:mateust92@gmail.com">mateust92@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 footer-copyright">
+                    &copy; SchooLINE 2017 
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fim do Footer da Pagina Home -->
+</body>
+</html>

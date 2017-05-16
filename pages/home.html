@@ -1,0 +1,1130 @@
+<!DOCTYPE html lang="pt-br">
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="../js/jquery-3.2.1.js"> </script>
+    <script src="../js/handlebars-v4.0.5.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">   
+    <link href="../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+    <script src="../js/jquery.circliful.min.js"></script>
+    
+
+</head>
+<body> 
+
+    <!--Inicio da Section Menu NavBar-->
+    <section class="MENU"> 
+    <nav class="navbar navbar-inverse">
+                  <div class="container-fluid">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                      </button>
+                      <a class="navbar-brand" href="#">SchooLINE</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="#" id="itHome">Home</a></li>
+                        <li><a href="#" id="itNotas"><span class="glyphicon glyphicon-tag"></span> Notas</a></li>
+                        <li><a href="#" id="itFreq"><span class="glyphicon glyphicon-stats"></span> Frequência</a></li>
+                        <li><a href="#" id="itHor" ><span class="glyphicon glyphicon-dashboard"></span> Horários</a></li>
+                        <li><a href="#" id="itCal"><span class="glyphicon glyphicon-calendar"></span> Calendário</a></li>
+                           <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="profe"> <span class="glyphicon glyphicon-user"></span> Professores <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#P1" aria-controls="home" role="tab" data-toggle="tab" id="p1" style="color: white;"><span class="glyphicon glyphicon-user"></span> Professor 1</a></li>
+                                <li><a href="#P2" aria-controls="home" role="tab" data-toggle="tab" id="p2" style="color: white;"><span class="glyphicon glyphicon-user"></span> Professor 2</a></li>
+                             </ul>
+                          </li>
+                        <li><a href="#" id="itCont"><span class="glyphicon glyphicon-send"></span> Contato</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-info-sign"></span> Sobre</a></li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#" id="itSair" data-toggle="modal" data-target="#confirm-submit"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+                      </ul>
+                    </div>
+                  </div>
+            </nav>
+    </section>    
+    <!--Final da Section Menu NavBar--> 
+
+
+    <!--Inicio da Section Home------------->
+    <section class="HOME">
+    <div class="alert alert-success" role="alert" tabindex="55"><span class="glyphicon glyphicon-thumbs-up" tabindex="56"></span><strong>  Fique tranquilo, o desempenho do aluno até o momento é satisfatório.</strong></div>
+
+    <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <a class="btn btn-success btn-lg btn-block" role="label" tabindex="57"><h1 tabindex="58"><strong>7.5</strong></h1></a>
+                    <a class="btn btn-default btn-lg btn-block" role="label" tabindex="59"><h1 tabindex="60" role="label">Média Global</h1></a>
+                </div> 
+                <div class="col-xs-12 col-md-6">
+                    <a class="btn btn-warning btn-lg btn-block" role="label" tabindex="61"><h1 tabindex="62"><strong>78%</strong></h1></a>
+                    <a class="btn btn-default btn-lg btn-block" role="label" tabindex="63"><h1 tabindex="64">Frequência Global</h1></a>
+                </div>  
+            </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-offset-2 col-sm-8" style="margin-top: 40px;">
+                <h1><strong>EVENTOS DO MÊS:</strong></h1>
+                    <ul class="event-list">
+                        <li tabindex="65">
+                            <time datetime="2017-05-19">
+                                <span class="day">19</span>
+                                <span class="month">Maio</span>
+                                <span class="year">2017</span>
+                                <span class="time">Evento1</span>
+                            </time>
+                            <div class="info">
+                                <h2 class="title">19 de Maio</h2>
+                                <p class="desc">Apresentação...... </p>
+                            </div>
+                        </li>
+                        <li tabindex="66">
+                            <time datetime="2017-05-28">
+                                <span class="day">28</span>
+                                <span class="month">Maio</span>
+                                <span class="year">2017</span>
+                                <span class="time">Evento2</span>
+                            </time>
+                            <div class="info">
+                                <h2 class="title">28 de Maio</h2>
+                                <p class="desc">Reunião ... </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Final da Section Home-->
+
+
+    <!--Inicio da Section Notas------------->
+    <section class="NOTAS">
+    <div class="container">
+          <div class="row">
+            <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="block block-3">
+                        <h1>Matemática</h1>
+                        <div class="list-group">
+                            <a type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P1" data-content="8" data-trigger="hover" tabindex="17" id="Prova1B"><span class="glyphicon glyphicon-edit"></span> Prova 1</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P2" data-content="6" data-trigger="hover" tabindex="18" id="Prova2B"><span class="glyphicon glyphicon-edit"></span> Prova 2</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P3" data-content="6"data-trigger="hover" tabindex="19" id="Prova3B"><span class="glyphicon glyphicon-edit"></span> Prova 3</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P4" data-content="7"data-trigger="hover" tabindex="20" id="Prova4B"><span class="glyphicon glyphicon-edit"></span> Prova 4</a>
+                            <div class="alert alert-info" role="alert"><h3> Média Final: 6.75</h3></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="block block-3">
+                        <h1>Geografia</h1>
+                        <div class="list-group">
+                            <a type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P1" data-content="8" data-trigger="hover" tabindex="21"><span class="glyphicon glyphicon-edit"></span> Prova 1</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P2" data-content="8" data-trigger="hover" tabindex="22"><span class="glyphicon glyphicon-edit"></span> Prova 2</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P3" data-content="8"data-trigger="hover" tabindex="23"><span class="glyphicon glyphicon-edit"></span> Prova 3</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P4" data-content="8"data-trigger="hover" tabindex="24"><span class="glyphicon glyphicon-edit"></span> Prova 4</a>
+                            <div class="alert alert-info" role="alert"><h3> Média Final: 8</h3></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="block block-3">
+                        <h1>História</h1>
+                        <div class="list-group">
+                            <a type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P1" data-content="7" data-trigger="hover" tabindex="26"><span class="glyphicon glyphicon-edit"></span> Prova 1</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P2" data-content="7" data-trigger="hover" tabindex="28"><span class="glyphicon glyphicon-edit"></span> Prova 2</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P3" data-content="7"data-trigger="hover" tabindex="29"><span class="glyphicon glyphicon-edit"></span> Prova 3</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P4" data-content="7"data-trigger="hover" tabindex="29"><span class="glyphicon glyphicon-edit"></span> Prova 4</a>
+                            <div class="alert alert-info" role="alert"><h3> Média Final: 7</h3></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="block block-3">
+                        <h1>Química</h1>
+                        <div class="list-group">
+                            <a type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P1" data-content="10" data-trigger="hover" tabindex="31"><span class="glyphicon glyphicon-edit"></span> Prova 1</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P2" data-content="10" data-trigger="hover" tabindex="32"><span class="glyphicon glyphicon-edit"></span> Prova 2</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P3" data-content="8"data-trigger="hover" tabindex="33"><span class="glyphicon glyphicon-edit"></span> Prova 3</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P4" data-content="8"data-trigger="hover" tabindex="34"><span class="glyphicon glyphicon-edit"></span> Prova 4</a>
+                            <div class="alert alert-info" role="alert"><h3> Média Final: 9</h3></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="block block-3">
+                        <h1>Física</h1>
+                        <div class="list-group">
+                            <a type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P1" data-content="6" data-trigger="hover" tabindex="36"><span class="glyphicon glyphicon-edit"></span> Prova 1</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P2" data-content="6" data-trigger="hover" tabindex="37"><span class="glyphicon glyphicon-edit"></span> Prova 2</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P3" data-content="6"data-trigger="hover" tabindex="38"><span class="glyphicon glyphicon-edit"></span> Prova 3</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P4" data-content="6"data-trigger="hover" tabindex="39"><span class="glyphicon glyphicon-edit"></span> Prova 4</a>
+                            <div class="alert alert-info" role="alert"><h3> Média Final: 6</h3></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="block block-3">
+                        <h1>Português</h1>
+                        <div class="list-group">
+                            <a type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P1" data-content="7" data-trigger="hover" tabindex="41"><span class="glyphicon glyphicon-edit"></span> Prova 1</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P2" data-content="7" data-trigger="hover" tabindex="42"><span class="glyphicon glyphicon-edit"></span> Prova 2</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P3" data-content="7"data-trigger="hover" tabindex="43"><span class="glyphicon glyphicon-edit"></span> Prova 3</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P4" data-content="7"data-trigger="hover" tabindex="44"><span class="glyphicon glyphicon-edit"></span> Prova 4</a>
+                            <div class="alert alert-info" role="alert"><h3> Média Final: 7</h3></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="block block-3">
+                        <h1>Inglês</h1>
+                        <div class="list-group">
+                            <a type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P1" data-content="8" data-trigger="hover" tabindex="46"><span class="glyphicon glyphicon-edit"></span> Prova 1</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P2" data-content="8" data-trigger="hover" tabindex="47"><span class="glyphicon glyphicon-edit"></span> Prova 2</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P3" data-content="9"data-trigger="hover" tabindex="48"><span class="glyphicon glyphicon-edit"></span> Prova 3</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P4" data-content="7"data-trigger="hover" tabindex="49"><span class="glyphicon glyphicon-edit"></span> Prova 4</a>
+                           <div class="alert alert-info" role="alert"><h3> Média Final: 8</h3></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="block block-3">
+                        <h1>Biologia</h1>
+                        <div class="list-group">
+                            <a type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P1" data-content="8" data-trigger="hover" tabindex="51"><span class="glyphicon glyphicon-edit"></span> Prova 1</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P2" data-content="8" data-trigger="hover" tabindex="52"><span class="glyphicon glyphicon-edit"></span> Prova 2</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P3" data-content="8"data-trigger="hover" tabindex="53"><span class="glyphicon glyphicon-edit"></span> Prova 3</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P4" data-content="8"data-trigger="hover" tabindex="54"><span class="glyphicon glyphicon-edit"></span> Prova 4</a>
+                            <div class="alert alert-info" role="alert"><h3> Média Final: 8</h3></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--Final da Section Notas------------->
+
+    <!--Inicio da Section Frequencia------------->   
+    <section class="FREQUENCIA">
+        <div class="container">
+        <div class="tab-content">
+            <div class="row features">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single" role="tableHours" tabindex="1" id="div1">
+                        <div class="icon-outer" id="div12">
+                            <div class="icon">
+                            <i class="fa fa-sign-in"></i>
+                            </div>
+                        </div>
+                        <h2>Matemática</h2>
+                        <div class="col-lg-12">
+                            <div id="idMatematica" tabindex="2"></div>
+                        </div>
+                        <p>Porcentagem de presença na disciplina até o momento.</p>
+                    </div>
+                </div>    
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single" tabindex="3">
+                        <div class="icon-outer">
+                            <div class="icon">
+                            <i class="fa fa-sign-in"></i>
+                            </div>
+                        </div>
+                        <h2>Português</h2>
+                        <div class="col-lg-12">
+                            <div id="idPortugues" tabindex="4"></div>
+                        </div>
+                        <p>Porcentagem de presença na disciplina até o momento.</p>
+                    </div>
+                </div> 
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single" tabindex="5">
+                        <div class="icon-outer">
+                            <div class="icon">
+                            <i class="fa fa-sign-in"></i>
+                            </div>
+                        </div>
+                        <h2>Geografia</h2>
+                        <div class="col-lg-12">
+                            <div id="idGeografia" tabindex="6"></div>
+                        </div>
+                        <p>Porcentagem de presença na disciplina até o momento.</p>
+                    </div>
+                </div> 
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single" tabindex="7">
+                        <div class="icon-outer">
+                            <div class="icon">
+                            <i class="fa fa-sign-in"></i>
+                            </div>
+                        </div>
+                        <h2>História</h2>
+                        <div class="col-lg-12">
+                            <div id="idHistoria" tabindex="8"></div>
+                        </div>
+                        <p>Porcentagem de presença na disciplina até o momento.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single" tabindex="9">
+                        <div class="icon-outer">
+                            <div class="icon">
+                            <i class="fa fa-sign-in"></i>
+                            </div>
+                        </div>
+                        <h2>Química</h2>
+                        <div class="col-lg-12">
+                            <div id="idQuimica" tabindex="10"></div>
+                        </div>
+                        <p>Porcentagem de presença na disciplina até o momento.</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single" tabindex="11">
+                        <div class="icon-outer">
+                            <div class="icon">
+                            <i class="fa fa-sign-in"></i>
+                            </div>
+                        </div>
+                        <h2>Física</h2>
+                        <div class="col-lg-12">
+                            <div id="idFisica" tabindex="12"></div>
+                        </div>
+                        <p>Porcentagem de presença na disciplina até o momento.</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single" tabindex="13">
+                        <div class="icon-outer">
+                            <div class="icon">
+                            <i class="fa fa-sign-in"></i>
+                            </div>
+                        </div>
+                        <h2>Inglês</h2>
+                        <div class="col-lg-12">
+                            <div id="idIngles" tabindex="14"></div>
+                        </div>
+                        <p>Porcentagem de presença na disciplina até o momento.</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single" tabindex="15">
+                        <div class="icon-outer">
+                            <div class="icon">
+                            <i class="fa fa-sign-in"></i>
+                            </div>
+                        </div>
+                        <h2>Biologia</h2>
+                        <div class="col-lg-12">
+                            <div id="idBiologia" tabindex="16"></div>
+                        </div>
+                        <p>Porcentagem de presença na disciplina até o momento.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </section>     
+    <!--Final da Section Frequencia------------->
+
+
+    <!--Inicio da Section Horarios------------->          
+    <section class="HORARIO">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <h1><strong>Segunda-feira</strong></h1>
+                    <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel">
+                        <div class="panel-heading" role="tab" id="Seg1">
+                          <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#Segunda1" aria-expanded="false" aria-controls="Segunda1">
+                          07:30
+                        </a>
+                      </h4>
+                        </div>
+                        <div id="Segunda1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Seg1">
+                          <div class="panel-body">
+                            Nome da Disciplina
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of panel -->
+
+                      <div class="panel">
+                        <div class="panel-heading" role="tab" id="Seg2">
+                          <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Segunda2" aria-expanded="false" aria-controls="Segunda2">
+                          08:20
+                        </a>
+                      </h4>
+                        </div>
+                        <div id="Segunda2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Seg2">
+                          <div class="panel-body">
+                            Nome da Disciplina
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of panel -->
+
+                      <div class="panel">
+                        <div class="panel-heading" role="tab" id="Seg3">
+                          <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Segunda3" aria-expanded="false" aria-controls="Segunda3">
+                          09:10
+                        </a>
+                      </h4>
+                        </div>
+                        <div id="Segunda3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Seg3">
+                          <div class="panel-body">
+                            Nome da Disciplina
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of panel -->
+
+                      <div class="panel">
+                        <div class="panel-heading" role="tab" id="Seg4">
+                          <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Segunda4" aria-expanded="false" aria-controls="Segunda4">
+                          10:20
+                        </a>
+                      </h4>
+                        </div>
+                        <div id="Segunda4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Seg4">
+                          <div class="panel-body">
+                            Nome da Disciplina
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of panel -->
+
+                        <div class="panel">
+                            <div class="panel-heading" role="tab" id="Seg5">
+                              <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Segunda5" aria-expanded="false" aria-controls="Segunda5">
+                              11:10
+                            </a>
+                          </h4>
+                            </div>
+                            <div id="Segunda5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Seg5">
+                              <div class="panel-body">
+                                Nome da Disciplina
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end of panel -->    
+
+                    </div>
+                    <!-- end of #accordion -->
+
+                  </div>
+                  <!-- end of wrap -->
+
+        <div class="col-md-6 col-sm-6">
+            <h1><strong>Terça-feira</strong></h1>
+                <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Ter1">
+                      <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#Terca1" aria-expanded="false" aria-controls="Terca1">
+                      07:30
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Terca1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Ter1">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Ter2">
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Terca2" aria-expanded="false" aria-controls="Terca2">
+                      08:20
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Terca2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Ter2">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Ter3">
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Terca3" aria-expanded="false" aria-controls="Terca3">
+                      09:10
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Terca3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Ter3">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Ter4">
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Terca4" aria-expanded="false" aria-controls="Terca4">
+                      10:20
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Terca4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Ter4">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="Ter5">
+                          <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Terca5" aria-expanded="false" aria-controls="Terca5">
+                          11:10
+                        </a>
+                      </h4>
+                        </div>
+                        <div id="Terca5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Ter5">
+                          <div class="panel-body">
+                            Nome da Disciplina
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of panel -->    
+
+                </div>
+                <!-- end of #accordion -->
+
+              </div>
+              <!-- end of wrap -->
+        </div>
+        <div class="row">  
+            <div class="col-md-6 col-sm-6">
+                <h1><strong>Quarta-feira</strong></h1>
+                <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Qua1">
+                      <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#Quarta1" aria-expanded="false" aria-controls="Quarta1">
+                      07:30
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Quarta1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Qua1">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Qua2">
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Quarta2" aria-expanded="false" aria-controls="Quarta2">
+                      08:20
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Quarta2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Qua2">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Qua3">
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Quarta3" aria-expanded="false" aria-controls="Quarta3">
+                      09:10
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Quarta3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Qua3">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Qua4">
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Quarta4" aria-expanded="false" aria-controls="Quarta4">
+                      10:20
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Quarta4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Qua4">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="Qua5">
+                          <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Quarta5" aria-expanded="false" aria-controls="Quarta5">
+                          11:10
+                        </a>
+                      </h4>
+                        </div>
+                        <div id="Quarta5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Qua5">
+                          <div class="panel-body">
+                            Nome da Disciplina
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of panel -->    
+
+                </div>
+                <!-- end of #accordion -->
+
+              </div>
+              <!-- end of wrap -->
+
+
+
+
+            <div class="col-md-6 col-sm-6">
+                <h1><strong>Quinta-feira</strong></h1>
+                <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Qui1">
+                      <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#Quinta1" aria-expanded="false" aria-controls="Quinta1">
+                      07:30
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Quinta1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Qui1">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Qui2">
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Quinta2" aria-expanded="false" aria-controls="Quinta2">
+                      08:20
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Quinta2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Qui2">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Qui3">
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Quinta3" aria-expanded="false" aria-controls="Quinta3">
+                      09:10
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Quinta3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Qui3">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Qui4">
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Quinta4" aria-expanded="false" aria-controls="Quinta4">
+                      10:20
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Quinta4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Qui4">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="Qui5">
+                          <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Quinta5" aria-expanded="false" aria-controls="Quinta5">
+                          11:10
+                        </a>
+                      </h4>
+                        </div>
+                        <div id="Quinta5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Qui5">
+                          <div class="panel-body">
+                            Nome da Disciplina
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of panel -->    
+
+                </div>
+                <!-- end of #accordion -->
+
+              </div>
+              <!-- end of wrap -->
+        </div>
+        <div class="row">  
+            <div class="col-md-6 col-sm-6">
+                <h1><strong>Sexta-feira</strong></h1>
+                <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Sex1">
+                      <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#Sexta1" aria-expanded="false" aria-controls="Sexta1">
+                      07:30
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Sexta1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Sex1">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Sex2">
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Sexta2" aria-expanded="false" aria-controls="Sexta2">
+                      08:20
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Sexta2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Sex2">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Sex3">
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Sexta3" aria-expanded="false" aria-controls="Sexta3">
+                      09:10
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Sexta3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Sex3">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="Sex4">
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Sexta4" aria-expanded="false" aria-controls="Sexta4">
+                      10:20
+                    </a>
+                  </h4>
+                    </div>
+                    <div id="Sexta4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Sex4">
+                      <div class="panel-body">
+                        Nome da Disciplina
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id="Sex5">
+                          <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Sexta5" aria-expanded="false" aria-controls="Sexta5">
+                          11:10
+                        </a>
+                      </h4>
+                        </div>
+                        <div id="Sexta5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Sex5">
+                          <div class="panel-body">
+                            Nome da Disciplina
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of panel -->    
+
+                </div>
+                <!-- end of #accordion -->
+
+              </div>
+              <!-- end of wrap -->
+
+
+
+        </div> <!--Fecha row -->
+        </div> <!--Fecha Container -->
+    </section>        
+    <!--Final da Section Horarios------------->  
+
+    <!-- Pagina SOBRE-->    
+    <!-- Modal Pagina Sobre-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-info-sign"></span> Sobre o SchooLINE</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Sistema Web Responsivo desenvolvido na componente curricular optativa de Tópicos Especiais em Desenvolvimento Web do curso de Ciência da Computação, da
+                        Universidade Federal da Fronteira Sul.
+                   </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Final da Section Sobre-->
+
+
+    <!--Inicio da Section Professores-->
+    <section class="PROFESSOR">  
+        <div class="container">
+            <div class="tab-content">
+                <!-- Primeiro Professor -->   
+                <div role="tabpanel" class="tab-pane" id="P1">
+                  <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3 form-box">
+                         <div class="thumbnail">
+                            <div class="imagem">
+                                <img src="../img/1.png" alt="Imagem de perfil do professor">
+                            </div>
+                            <div class="caption">
+                              <h2>José</h2>
+                              <h3>Professor da Disciplina de Matemática</h3>
+
+                                <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">  
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="headingP1">
+                                      <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseP1" aria-expanded="false" aria-controls="collapseP1">
+                                       Informações para Contato
+                                    </a>
+                                  </h4>
+                                    </div>
+                                    <div id="collapseP1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingP1">
+                                      <div class="panel-body">
+                                        <p>Email: joao@gmail.com</p>
+                                        <p>Fone: (49) 99999-9999</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- end of panel -->
+                                    </div>
+                                  <!-- end of wrap -->
+                            </div>
+                          </div>
+                      </div>
+                    </div>  
+                </div>
+                <!-- Segundo Professor -->  
+                <div role="tabpanel" class="tab-pane" id="P2">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3 form-box">
+                         <div class="thumbnail">
+                            <div class="imagem">
+                                <img src="../img/5.png" alt="Imagem de perfil do professor">
+                             </div>
+                            <div class="caption">
+                              <h2>João</h2>
+                              <h3>Professor da Disciplina de Geografia</h3>
+
+                                    <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">  
+                                      <div class="panel">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                          <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                          Informações para Contato
+                                        </a>
+                                      </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                          <div class="panel-body">
+                                            <p>Email: joao@gmail.com</p>
+                                            <p>Fone: (49) 99999-9999</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- end of panel -->
+                                    </div>
+                                  <!-- end of wrap -->
+
+
+
+
+
+                            </div>
+                          </div>
+                      </div>  
+                    </div>
+              </div>
+            </div>
+        </div>
+    </section>    
+    <!--Final da Section Professores-->
+
+
+    <!--Inicio da Section Calendario-->
+     <section class="CALENDARIO">   
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-sm-offset-0"> 
+                 <!-- Indicators -->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="../img/fev.jpg" alt="Calendario do Mês de Fevereiro">
+                            <div class="carousel-caption">
+                                <h3>Fevereiro</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../img/mar.jpg" alt="Calendario do Mês de Março">
+                            <div class="carousel-caption">
+                                <h3>Março</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../img/abril.jpg" alt="Calendario do Mês de Abril">
+                            <div class="carousel-caption">
+                                <h3>Abril</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../img/maio.jpg" alt="Calendario do Mês de Maio">
+                            <div class="carousel-caption">
+                                <h3>Maio</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../img/junho.jpg" alt="Calendario do Mês de Junho">
+                            <div class="carousel-caption">
+                                <h3>Junho</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../img/julho.jpg" alt="Calendario do Mês de Julho">
+                            <div class="carousel-caption">
+                                <h3>Julho</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../img/agosto.jpg" alt="Calendario do Mês de Agosto">
+                            <div class="carousel-caption">
+                                <h3>Agosto</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../img/setembro.jpg" alt="Calendario do Mês de Setembro">
+                            <div class="carousel-caption">
+                                <h3>Setembro</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../img/outubro.jpg" alt="Calendario do Mês de Outubro">
+                            <div class="carousel-caption">
+                                <h3>Outubro</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../img/novembro.jpg" alt="Calendario do Mês de Novembro">
+                            <div class="carousel-caption">
+                                <h3>Novembro</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../img/dezembro.jpg" alt="Calendario do Mês de Dezembro">
+                            <div class="carousel-caption">
+                                <h3>Dezembro</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="fa fa-angle-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                        <li data-target="#myCarousel" data-slide-to="5"></li>
+                        <li data-target="#myCarousel" data-slide-to="6"></li>
+                        <li data-target="#myCarousel" data-slide-to="7"></li>
+                        <li data-target="#myCarousel" data-slide-to="8"></li>
+                        <li data-target="#myCarousel" data-slide-to="9"></li>
+                        <li data-target="#myCarousel" data-slide-to="10"></li>
+                    </ol>
+                </div>   
+              </div>
+            </div>
+        </div>
+    </section>  
+    <!--Final da Section Calendario-->
+
+
+    <!--Inicio da Section Contato-->
+    <section class="CONTATO">
+       <div class="container">
+           <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="form-area">  
+                        <form role="form">
+                            <br style="clear:both">
+                            <h3>Contate-nos</h3>
+                            <fieldset>
+                                <legend class="sr-only">Formulario para Contato</legend>
+                                <div class="form-group">
+                                    <label class="sr-only" for="nome" id="contato-nome">Nome</label>
+                                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="email" id="contato-email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="fone" id="contato-fone">Telefone</label>
+                                    <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="assunto" id="contato-assunto">Assunto</label>
+                                    <input type="text" class="form-control" id="assunto" name="assunto" placeholder="Assunto" required>
+                                </div>
+                                <div class="form-group">
+                                <label class="sr-only" for="mensagem" id="contato-mensagem">Mensagem</label>
+                                <textarea class="form-control" type="textarea" id="mensagem" placeholder="Mensagem" maxlength="140" rows="7"></textarea>
+                                <span class="help-block"><p id="letras" class="help-block ">Você atingiu o limite de caracteres</p></span>                    
+                                </div>
+                            </fieldset>
+                        <button type="submit" id="btEnviar" name="submit" class="btn btn-primary pull-right" data-loading-text="Enviando..." autocomplete="off">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </section> 
+    <!--Final da Section contato-->
+
+    <!-- Modal para botão Sair-->
+    <div class="modal fade" id="confirm-submit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Deseja realmente deixar o sistema?
+                </div>
+                <div class="modal-footer">
+                    <div class="container-fluid">
+                        <div class= "col-sm-12 text-center">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" id="submit">Sair</button>
+                        </div>                                                                                                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim o modal-->
+
+    <script src="../js/user.js"></script>    
+    
+    <!-- Footer da Pagina Home -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 footer-about wow fadeInUp">
+                        <h3>Sobre o SchooLine</h3>
+                        <p>
+                            Sistema Web Responsivo desenvolvido na componente curricular optativa de Tópicos Especiais em Desenvolvimento Web do curso de Ciência da Computação, da
+                            Universidade Federal da Fronteira Sul.
+                        </p>
+                    </div>
+                    <div class="col-sm-6 footer-contact-info wow fadeInDown">
+                        <h3>Informações de Contato</h3>
+                        <p><i class="fa fa-map-marker"></i> Av. Getúlio Vargas, 10136 Chapecó - Santa Catarina - Brasil</p>
+                        <p><i class="fa fa-phone"></i> Fone: (049) 99999-9999</p>
+                        <p><i class="fa fa-envelope"></i> Email: <a href="mailto:mateust92@gmail.com">mateust92@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 footer-copyright">
+                        &copy; SchooLINE 2017 
+                    </div>
+                </div>
+            </div>
+        </footer>    
+    <!-- Fim do Footer da Pagina Home -->
+    
+</body>
+</html>
