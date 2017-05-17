@@ -56,7 +56,7 @@
 
     <!--Inicio da Section Home------------->
     <section class="HOME">
-    <div class="alert alert-success" role="alert" tabindex="55"><span class="glyphicon glyphicon-thumbs-up" tabindex="56"></span><strong>  Fique tranquilo, o desempenho do aluno até o momento é satisfatório.</strong></div>
+    <div class="alert alert-success alertas" role="alert" tabindex="55"><h1><span class="glyphicon glyphicon-thumbs-up" tabindex="56"></span><strong>  Fique tranquilo, o desempenho do aluno até o momento é satisfatório.</strong></h1></div>
 
     <div class="container">
             <div class="row">
@@ -851,12 +851,10 @@
                   <div class="row">
                       <div class="col-sm-6 col-sm-offset-3 form-box">
                          <div class="thumbnail">
-                            <div class="imagem">
-                                <img src="../img/1.png" alt="Imagem de perfil do professor">
-                            </div>
+                                <a class="imagem" href="#" data-toggle="modal" data-target="#lightbox"> <img src="../img/1.png" alt="Imagem de perfil do professor"></a>
                             <div class="caption">
-                              <h2>José</h2>
-                              <h3>Professor da Disciplina de Matemática</h3>
+                              <h1>José</h1>
+                              <h2>Professor da Disciplina de Matemática</h2>
 
                                 <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">  
                                 <div class="panel">
@@ -888,11 +886,11 @@
                       <div class="col-sm-6 col-sm-offset-3 form-box">
                          <div class="thumbnail">
                             <div class="imagem">
-                                <img src="../img/5.png" alt="Imagem de perfil do professor">
+                                <a class="imagem" href="#" data-toggle="modal" data-target="#lightbox"> <img src="../img/5.png" alt="Imagem de perfil do professor"></a>
                              </div>
                             <div class="caption">
-                              <h2>João</h2>
-                              <h3>Professor da Disciplina de Geografia</h3>
+                              <h1>João</h1>
+                              <h2>Professor da Disciplina de Geografia</h2>
 
                                     <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">  
                                       <div class="panel">
@@ -925,6 +923,16 @@
               </div>
             </div>
         </div>
+        <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
     </section>    
     <!--Final da Section Professores-->
 
@@ -1043,7 +1051,7 @@
                     <div class="form-area">  
                         <form role="form">
                             <br style="clear:both">
-                            <h3>Contate-nos</h3>
+                            <h1>Contate-nos</h1>
                             <fieldset>
                                 <legend class="sr-only">Formulario para Contato</legend>
                                 <div class="form-group">
@@ -1104,14 +1112,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 footer-about wow fadeInUp">
-                        <h3>Sobre o SchooLine</h3>
+                        <h1>Sobre o SchooLine</h1>
                         <p>
                             Sistema Web Responsivo desenvolvido na componente curricular optativa de Tópicos Especiais em Desenvolvimento Web do curso de Ciência da Computação, da
                             Universidade Federal da Fronteira Sul.
                         </p>
                     </div>
                     <div class="col-sm-6 footer-contact-info wow fadeInDown">
-                        <h3>Informações de Contato</h3>
+                        <h1>Informações de Contato</h1>
                         <p><i class="fa fa-map-marker"></i> Av. Getúlio Vargas, 10136 Chapecó - Santa Catarina - Brasil</p>
                         <p><i class="fa fa-phone"></i> Fone: (049) 99999-9999</p>
                         <p><i class="fa fa-envelope"></i> Email: <a href="mailto:mateust92@gmail.com">mateust92@gmail.com</a></p>

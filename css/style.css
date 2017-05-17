@@ -30,9 +30,17 @@ body {
 
 strong { font-weight: 500; }
 
-h1, h2 {
+h1 {
 	margin-top: 10px;
-	font-size: 38px;
+	font-size: 40px;
+    font-weight: 200;
+    color: #000;
+    line-height: 50px;
+}
+
+h2 {
+	margin-top: 10px;
+	font-size: 26px;
     font-weight: 100;
     color: #555;
     line-height: 50px;
@@ -51,6 +59,15 @@ img { max-width: 100%; }
     color: black;
 }
 
+.fadeInUp h1, .fadeInDown h1{
+    font-size: 22px;
+    color: #000;
+}
+
+.alertas h1{
+     font-size: 22px;
+    color: #000;
+}
 
 /*Estilo para paginas de login e cadastro */
 
@@ -211,15 +228,6 @@ footer h3 { margin-top: 0; }
 
 
 /*Estilo usado na Section Professores*/
-.caption h2 {
-    width:100%;
-	padding: 12px;
-	font-size: 38px;
-	font-weight: 900;
-	text-align: center;
-	text-shadow: 0.5px 0.5px 0.5px #000;
-}
-
 .caption h3 {
     width:100%;
     padding: 12px;
@@ -843,9 +851,7 @@ a:active {
   background-color: #15665e;
 }
 
-.panel-heading:after{
-    background-color: #009688;
-}
+
 
 /* Fim das Tags para Collapse Professores e Horarios */
 
@@ -853,6 +859,25 @@ a:active {
     .imagem{
         display: none;
     }
+}
+
+#lightbox .modal-content {
+    display: inline-block;
+    text-align: center;   
+}
+
+#lightbox .close {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 25, 25);
+    padding: 5px 8px;
+    border-radius: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    top: -15px;
+    right: -55px;
+    
+    z-index:1032;
 }
 
 @media (max-width: 575px) { ... }
