@@ -6,6 +6,7 @@
     <script src="../js/jquery-3.2.1.js"> </script>
     <script src="../js/handlebars-v4.0.5.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/validator.min.js"></script>
     <link rel="stylesheet" href="../http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -1051,7 +1052,7 @@
            <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
                     <div class="form-area">  
-                        <form role="form">
+                        <form role="form" data-toggle="validator">
                             <br style="clear:both">
                             <h1>Contate-nos</h1>
                             <fieldset>
@@ -1062,11 +1063,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="email" id="contato-email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email... Ex: meunome@gmail.com" required>
+                                    <input type="email" class="form-control" id="email" name="email" data-error="Por favor, informe um e-mail correto."  placeholder="Email... Ex: meunome@gmail.com" required>
+                                    <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="fone" id="contato-fone">Telefone</label>
-                                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Telefone... Ex: (49) 99999-9999" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}$" required>
+                                    <input type="tel" class="form-control" id="telefone" name="telefone"  data-error="Por favor, informe um telefone no formato: (49) 99999-9999" placeholder="Telefone... Ex: (49) 99999-9999" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}$" required>
+                                    <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="assunto" id="contato-assunto">Assunto</label>
